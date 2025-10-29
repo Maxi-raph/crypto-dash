@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans p-3;
+  }
+}
+
+@layer components {
+  .h1 {
+    @apply my-4 mx-4 text-2xl font-bold;
+  }
+  .coin-card {
+    @apply bg-gray-900 p-6 rounded-lg shadow-md mb-5 ;
+  }
+  .coin-card:hover {
+    @apply transform scale-102 transition-transform duration-300;
+  }
+  .coin-header{
+    @apply  w-full flex items-center gap-x-4;
+  }
+  .coin-image{
+    @apply w-12 h-12 ;
+  }
+  .coin-name{
+    @apply text-xl font-semibold;
+  }
+  .coin-symbol{
+    @apply text-gray-400 ;
+  } 
+  .coin-price{
+    @apply mt-2 text-lg font-medium;
+  }
+  .top-controls{
+    @apply flex items-center mb-6 gap-x-4;
+  }
+  .controls{
+    @apply flex justify-end items-center;
+  } 
+  .filter{
+    @apply p-2 rounded-md bg-gray-800 text-white border w-full border-gray-700;
+  }
+  .filter input{
+    @apply w-full bg-transparent outline-none placeholder:text-gray-500;
+  }
+  .about{
+    @apply text-center bg-gray-800 p-6 mt-12 rounded-lg mx-auto max-w-2xl;
+  }
+  .about h1{
+    @apply text-2xl font-bold mb-4;
+  }
+  .about p{
+    @apply mb-4 leading-relaxed text-gray-400;
+  }
+  .top-nav{
+    @apply flex justify-end space-x-3 text-blue-600 font-bold
+  }
+  .not-found{
+    @apply text-center px-10 py-20;
+  }
+  .not-found h1{
+    @apply text-4xl font-bold mb-6;
+  }
+  .not-found p{
+    @apply mb-4 text-gray-400 text-[18px];
+  }
+  .link{
+    @apply text-blue-600 font-bold;
+  }
+  .coin-details-container{
+    @apply text-center bg-white text-black p-6 mt-12 rounded-lg mx-auto max-w-xl; 
+  }
+  .coin-details{
+    @apply text-4xl font-bold mb-4 mt-2;
+  }
+  .coin-details-image{
+    @apply w-24 h-24 mx-auto mb-4 ;
+  }
+  .coin-details-description{
+    @apply text-lg leading-relaxed  font-medium;
+  }
+  .coin-details-info{
+    @apply mt-6 font-bold text-center text-2xl flex flex-col gap-y-3;
+  }
+  .coin-details-links{
+    @apply mt-6 font-semibold text-center text-xl flex flex-col gap-y-2;
+  }
+  .coin-details-links a{
+    @apply hover:underline  text-blue-500 ;
+  }
+}
