@@ -41,9 +41,13 @@ const HomePage = ({
     {loading && <Spinner />}
     {error && <div className='text-center text-2xl mt-14'>{error}</div>}
     <div className="top-controls">
-        < FilterInput filter={filter} setFilter={setFilter}/>
-        <LimitSelector limit={limit} setLimit={setLimit} />
-        <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
+        <div className='w-full'>
+          < FilterInput filter={filter} setFilter={setFilter}/>
+        </div>
+        <div className='flex w-full items-center'>
+          <LimitSelector limit={limit} setLimit={setLimit} />
+          <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
+        </div>
     </div>
     {!loading && !error && (
       <main className='grid gap-x-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
