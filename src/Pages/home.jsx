@@ -44,7 +44,7 @@ const HomePage = ({
         <div className='w-full'>
           < FilterInput filter={filter} setFilter={setFilter}/>
         </div>
-        <div className='flex w-full items-center'>
+        <div className='flex flex-wrap gap-3 w-full items-center'>
           <LimitSelector limit={limit} setLimit={setLimit} />
           <SortSelector sortBy={sortBy} setSortBy={setSortBy} />
         </div>
