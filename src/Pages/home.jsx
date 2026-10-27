@@ -12,7 +12,9 @@ const HomePage = ({
     sortBy,
     setSortBy,
     loading,
-    error}) => {
+    error,
+    isWatched, 
+    toggleWatch}) => {
   
     const filteredCoins = coins.filter(coin=> coin.name.toLowerCase().includes(filter.toLowerCase()) || coin.symbol.toLowerCase().includes(filter.toLowerCase()))
   .slice()
@@ -46,7 +48,11 @@ const HomePage = ({
     {!loading && !error && (
       <main className='grid gap-x-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       {filteredCoins.length > 0 ? filteredCoins.map((coin)=>
-        <CoinCard coin={coin} key={coin.id}/>
+        <CoinCard 
+        coin={coin}
+        key={coin.id}
+        isWatched={isWatched}
+        toggleWatch={toggleWatch}/>
       ) : <p className='absolute left-1/3 gap-0'>No matching coins...</p>}
       </main>
 
