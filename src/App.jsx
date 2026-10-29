@@ -39,7 +39,7 @@ useEffect(()=>{
 
   return(
     <>
-    <Header watchlist={watchlist}/>
+    <Header watchlist={watchlist} coins={coins}/>
     <Routes>
       <Route path='/' element={<HomePage 
       coins={coins} 
